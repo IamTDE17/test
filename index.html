@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It Just A Test</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Animasi Hover</title>
+    <style>
+        .animated-div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: none;
+            transition: all 0.5s;
+        }
+        .animated-div:hover {
+            animation: hover-animation 1s forwards;
+        }
+
+        @keyframes hover-animation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+                background-color: red;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Just A Test</h1>
-        <p>Just Test Website, nothing special</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="https://youtu.be/o5Mdm_yXOQk?si=vYyQcPcI36GykH-W"> text </a></li>
-            <li><a href="https://youtu.be/o5Mdm_yXOQk?si=vYyQcPcI36GykH-W"> test </a></li>
-        </ul>    
-    </nav>
-        <img src="img/table.png" alt="No-1">
+    <div class="animated-div"></div>
 </body>
 </html>
